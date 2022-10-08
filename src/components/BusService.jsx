@@ -1,5 +1,7 @@
+import { Settings } from '@mui/icons-material';
+import { Box, Fab, Typography } from '@mui/material';
 import React from 'react'
-import { Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const BusService = ({ user }) => {
@@ -8,9 +10,18 @@ const BusService = ({ user }) => {
         return <Navigate replace to="/login" />;
     } else {
         return (
-            <div>
-                <p>Bus</p>
-            </div>
+            <Box>
+                <Link to="/bus-service-settings">
+                    <Fab sx={{
+                        position: 'absolute',
+                        bottom: 16,
+                        right: 16,
+                    }} aria-label="Setting" color="primary">
+                        <Settings />
+                    </Fab>
+                </Link>
+                <Typography>bus </Typography>
+            </Box>
         );
     }
 }

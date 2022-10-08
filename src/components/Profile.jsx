@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Stack, TextField, Tooltip, Typography, CircularProgress } from '@mui/material';
+import { Box, Button, Grid, Stack, TextField, Tooltip, Typography, CircularProgress, Avatar } from '@mui/material';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom';
@@ -118,23 +118,16 @@ const Profile = ({ user, setUser }) => {
                                     justifyContent: "center"
                                 }}>
                                     <Tooltip title="Change Image" placement="top" TransitionComponent={Zoom}>
-                                        <Box sx={{
-                                            width: "300px",
-                                            height: "300px",
-                                            // backgroundColor: "red",
-                                            backgroundImage: `url(${userData && userData.avatar})`,
-                                            borderRadius: "50%",
-                                            backgroundSize: "cover",
-                                            border: "2px solid #2596be",
+                                        <Avatar src={userData?.avatar} alt="" sx={{
                                             '&:hover': {
                                                 backgroundColor: 'primary.main',
                                                 opacity: [0.9, 0.8, 0.7],
                                                 cursor: "pointer"
-                                            },
-
-                                        }}
-                                        >
-                                        </Box>
+                                            }
+                                        }} style={{
+                                            width: 300,
+                                            height: 300
+                                        }} />
                                     </Tooltip>
                                 </Box>
                                 <Box sx={{

@@ -46,6 +46,7 @@ const LoginActivitiesModal = ({ style, isLoginActivitiesModal, setIsLoginActivit
                                                 <Typography><b>Ip Address: </b>{data.address.IPv4}</Typography>
                                                 <Typography><b>City: </b>{data.address.city}</Typography>
                                                 <Typography><b>Country Code: </b>{data.address.country_code}</Typography>
+                                                <Typography><b>Country Name: </b>{data.address.country_name}</Typography>
                                                 <Typography><b>Latitude: </b>{data.address.latitude}</Typography>
                                                 <Typography><b>Longitude: </b>{data.address.longitude}</Typography>
                                                 <Typography><b>Postal: </b>{data.address.postal}</Typography>

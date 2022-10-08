@@ -12,6 +12,7 @@ import RailwayService from "./components/RailwayService";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import { ToastContainer } from 'react-toastify';
+import BusServiceManagement from "./components/BusServiceManagement";
 function App() {
   const [user, setUser] = useState(null);
 
@@ -36,6 +37,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home user={user} />} />
         <Route path="hotel" element={<HotelService user={user} />} />
+        <Route path="bus-service-settings" element={<BusServiceManagement user={user} />} />
         <Route path="bus" element={<BusService user={user} />} />
         <Route path="railway" element={<RailwayService user={user} />} />
         <Route path="order" element={<OrderService user={user} />} />
